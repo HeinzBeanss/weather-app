@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <p></p>
+
+    <div class="searching">
+      <input
+        class="searchbar"
+        type="text"
+        value=""
+        placeholder="Search for a place to check the weather"
+      />
+      <!-- SET A GOOD INFORMATIVE PLACEHOLDER. USING COMMAS TO SEPARATE THINGS.
+    City name, state code (only for the US) and country code divided by comma. Please use ISO 3166 country codes. OR consider a good little message under the search bar. the bbcs is enter a town, city, or uk postcode. -->
+      <button class="searchbutton">SEARCH</button>
+    </div>
+
+    <p class="error"></p>
+
+    <button class="theme-toggle">
+      <img class="themesvg" src="assets/sun.svg" alt="" />
+    </button>
+  </body>
+  <script src="main.js"></script>
+</html>

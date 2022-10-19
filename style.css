@@ -1,0 +1,53 @@
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+:root.light {
+  --primary: #006a68;
+  --on-primary: #ffffff;
+  --secondary: #4a6362;
+  --error: #ba1a1a;
+  --error-container: #ffdad6;
+  --background: #fafdfc;
+  --on-background: #191c1c;
+  --surface: #fafdfc;
+  --on-surface: #191c1c;
+  --filter-test: invert(100%) sepia(2%) saturate(1097%) hue-rotate(77deg)
+    brightness(91%) contrast(96%);
+}
+
+:root.dark {
+  --primary: #4ddad6;
+  --on-primary: #003736;
+  --secondary: #b0ccca;
+  --on-secondary: #1b3534;
+  --error: #ffb4ab;
+  --on-error: #690005;
+  --error-container: #93000a;
+  --background: #191c1c;
+  --on-background: #e0e3e2;
+  --surface: rgb(30, 33, 33);
+  --on-surface: #e0e3e2;
+
+  --filter-test: invert(90%) sepia(13%) saturate(289%) hue-rotate(131deg)
+    brightness(91%) contrast(94%);
+}
+
+body {
+  background-color: var(--background);
+}
+
+.theme-toggle {
+  position: fixed;
+  padding: 15px;
+  background-color: var(--on-background);
+  border-radius: 40%;
+  border: 0;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.themesvg {
+  filter: var(--filter-test);
+}
