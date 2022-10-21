@@ -8,25 +8,84 @@
     <title>Weather App</title>
   </head>
   <body>
-    <p></p>
+    <div class="main">
+      <div class="nav">
+        <h1 class="title">WEATHER</h1>
+        <div class="searching">
+          <input
+            class="searchbar"
+            type="text"
+            value="California"
+            placeholder="Search for a city"
+          />
+          <!-- SET A GOOD INFORMATIVE PLACEHOLDER. USING COMMAS TO SEPARATE THINGS.
+        City name, state code (only for the US) and country code divided by comma. Please use ISO 3166 country codes. OR consider a good little message under the search bar. the bbcs is enter a town, city, or uk postcode. -->
+          <button class="searchbutton">SEARCH</button>
+        </div>
+      </div>
+      <div class="image"></div>
 
-    <div class="searching">
-      <input
-        class="searchbar"
-        type="text"
-        value=""
-        placeholder="Search for a place to check the weather"
-      />
-      <!-- SET A GOOD INFORMATIVE PLACEHOLDER. USING COMMAS TO SEPARATE THINGS.
-    City name, state code (only for the US) and country code divided by comma. Please use ISO 3166 country codes. OR consider a good little message under the search bar. the bbcs is enter a town, city, or uk postcode. -->
-      <button class="searchbutton">SEARCH</button>
+      <div class="maincontent">
+
+        <div class="left">
+
+          <h3 class="nametitle"></h3>
+          <div class="info">
+            <p class="leftinfo">Country</p>
+            <p id="country" class="rightinfo"></p>
+          </div>
+          <div class="info">
+            <p class="leftinfo">Sunrise</p>
+            <p id="sunrise" class="rightinfo"></p>
+          </div>
+          <div class="info">
+            <p class="leftinfo">Sunset</p>
+            <p id="sunset" class="rightinfo"></p>
+          </div>
+
+          <div class="convert">
+            <button class="F">FAHRENHEIT</button>
+            <button class="C selected">CELCIUS</button>
+          </div>
+        </div>
+
+
+        <div class="right">
+          <div class="info">
+            <p class="leftinfo">Main</p>
+            <p id="main" class="rightinfo"></p>
+          </div>
+          <div class="info">
+            <p class="leftinfo">Description</p>
+            <p id="desc" class="rightinfo"></p>
+          </div>
+          <div class="info">
+            <p class="leftinfo">Temperature</p>
+            <p id="temp" class="rightinfo"></p>
+          </div>
+          <div class="info">
+            <p class="leftinfo">Humidity</p>
+            <p id="humidity" class="rightinfo"></p>
+          </div>
+          <div class="info">
+            <p class="leftinfo">Visibility</p>
+            <p id="visibility" class="rightinfo"></p>
+          </div>
+
+        </div>
+      </div>
+
+      <p class="error">Please enter a correct search!</p>
+
+      <button class="theme-toggle">
+        <img class="themesvg" src="assets/sun.svg" alt="" />
+      </button>
     </div>
 
-    <p class="error"></p>
-
-    <button class="theme-toggle">
-      <img class="themesvg" src="assets/sun.svg" alt="" />
-    </button>
+    <footer class="footer">
+      <div class="leftfooter">Made by David Bean</div>
+      <div class="rightfooter">API from Open Weather</div>
+    </footer>
   </body>
   <script src="main.js"></script>
 </html>

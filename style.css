@@ -11,10 +11,12 @@
   --error-container: #ffdad6;
   --background: #fafdfc;
   --on-background: #191c1c;
-  --surface: #fafdfc;
+  --surface: #e4e4e4;
   --on-surface: #191c1c;
   --filter-test: invert(100%) sepia(2%) saturate(1097%) hue-rotate(77deg)
     brightness(91%) contrast(96%);
+    --grey: rgba(17, 17, 17, 0.5);
+    --shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
 
 :root.dark {
@@ -29,13 +31,18 @@
   --on-background: #e0e3e2;
   --surface: rgb(30, 33, 33);
   --on-surface: #e0e3e2;
-
+  --grey: rgba(240, 240, 240, 0.5);
   --filter-test: invert(90%) sepia(13%) saturate(289%) hue-rotate(131deg)
     brightness(91%) contrast(94%);
+    --shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
 
 body {
   background-color: var(--background);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .theme-toggle {
@@ -44,10 +51,133 @@ body {
   background-color: var(--on-background);
   border-radius: 40%;
   border: 0;
-  bottom: 2rem;
+  bottom: 5rem;
   right: 2rem;
 }
 
 .themesvg {
   filter: var(--filter-test);
 }
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px 0px;
+  color: var(--on-background);
+}
+
+.image {
+  background-image: url("assets/Rain.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  box-shadow: var(--shadow);
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  padding: 20px 0px;
+  border-bottom: 1px solid var(--grey);
+}
+
+.main {
+  box-shadow: var(--shadow);
+}
+
+.maincontent {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  gap: 80px;
+  color: var(--on-background);
+  
+}
+
+.left, .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rightinfo {
+  font-style: italic;
+}
+
+.nametitle {
+  font-size: 3em;
+}
+
+/* #country {
+  font-size: 2rem;
+} */
+
+p {
+  font-size: 1.2rem;
+}
+
+button {
+  background-color: var(--surface);
+  color: var(--on-surface);
+  border: 1px solid var(--primary);
+  border-radius: 0.2rem;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.selected {
+  background-color: var(--primary);
+  color: var(--on-primary);
+  border: none;
+  border-radius: 0.2rem;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+
+.searchbar {
+  background-color: var(--surface);
+  color: var(--on-background);
+  border: 0;
+  border-radius: 0.2rem;
+  padding: 10px 10px;
+  width: fit-content;
+  font-size: 1rem;
+  /* box-shadow: var(--shadow); */
+  
+}
+
+.convert {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+.convert > button {
+  width: 100%;
+}
+
+.error {
+  color: var(--error);
+  text-align: center;
+  padding: 30px;
+  visibility: hidden;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 0px;
+}
+
