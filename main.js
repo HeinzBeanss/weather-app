@@ -209,6 +209,10 @@ async function getWeatherFromSearch() {
   try {
     if (searchbar.value === "") {
       error.textContent = "Please enter a valid city name!";
+      error.style.visibility = "visible";
+    } else if (searchbar.validity.patternMismatch) {
+      error.textContent = "Please enter a valid city name!";
+      error.style.visibility = "visible";
     } else {
       const response = await fetch(
         `https://api.openweathermap.org/geo/1.0/direct?q=${searchbar.value}&limit=1&appid=aa73dae379feac51e8ebefcfd9b41a45`,
