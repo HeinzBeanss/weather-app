@@ -211,7 +211,7 @@ async function getWeatherFromSearch() {
       error.textContent = "Please enter a valid city name!";
     } else {
       const response = await fetch(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${searchbar.value}&limit=1&appid=aa73dae379feac51e8ebefcfd9b41a45`,
+        `https://api.openweathermap.org/geo/1.0/direct?q=${searchbar.value}&limit=1&appid=aa73dae379feac51e8ebefcfd9b41a45`,
         { mode: "cors" }
       );
       const data = await response.json();
@@ -228,7 +228,7 @@ async function getWeatherFromSearch() {
       );
       refinedForecast = await forecastData.json();
       error.style.visibility = "hidden";
-      
+
       displayMainWeather(refinedData);
       displayForecast(refinedForecast);
     }
