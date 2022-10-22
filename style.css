@@ -15,8 +15,8 @@
   --on-surface: #191c1c;
   --filter-test: invert(100%) sepia(2%) saturate(1097%) hue-rotate(77deg)
     brightness(91%) contrast(96%);
-    --grey: rgba(17, 17, 17, 0.5);
-    --shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  --grey: rgba(17, 17, 17, 0.5);
+  --shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
 :root.dark {
@@ -34,7 +34,7 @@
   --grey: rgba(240, 240, 240, 0.5);
   --filter-test: invert(90%) sepia(13%) saturate(289%) hue-rotate(131deg)
     brightness(91%) contrast(94%);
-    --shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  --shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -93,10 +93,10 @@ body {
   padding-top: 20px;
   gap: 80px;
   color: var(--on-background);
-  
 }
 
-.left, .right {
+.left,
+.right {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -106,7 +106,7 @@ body {
   font-style: italic;
 }
 
-.nametitle {
+.nametitle, .forecast {
   font-size: 3em;
 }
 
@@ -138,7 +138,6 @@ button {
   font-weight: 600;
 }
 
-
 .searchbar {
   background-color: var(--surface);
   color: var(--on-background);
@@ -148,7 +147,6 @@ button {
   width: fit-content;
   font-size: 1rem;
   /* box-shadow: var(--shadow); */
-  
 }
 
 .convert {
@@ -180,4 +178,3 @@ button {
   justify-content: space-evenly;
   padding: 20px 0px;
 }
-
